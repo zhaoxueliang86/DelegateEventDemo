@@ -11,8 +11,10 @@
 namespace ConsoleAppDemo
 {
     public delegate void DelegateWork();
-    public delegate void DelegateWork1(int i,string name);
+    public delegate void DelegateWork1(int i, string name);
     public delegate bool DelegateTask();
     public delegate void DelegatePlay(string name);
-    public delegate void DelegateGenericity<T>(T name);
+
+    public delegate void DelegateG1<T1, T2>(T1 t1, T2 t2);
+    public delegate TResult DelegateG2<T1, T2, TResult>(T1 t1, T2 t2);
 }

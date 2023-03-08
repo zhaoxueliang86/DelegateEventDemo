@@ -12,6 +12,7 @@
 namespace ConsoleAppDemo
 {
     public delegate void DeletegateKitchen(string person, string dish);
+    
     /// <summary>
     /// 餐厅类
     /// </summary>
@@ -39,6 +40,16 @@ namespace ConsoleAppDemo
         /// </summary>
         public event DeletegateKitchen? EventPackaged;
         #endregion
+
+        /// <summary>
+        /// 订单成功
+        /// </summary>
+        public event EventHandler? EventSuccess;
+        public class SuccessArgs : EventArgs
+        {
+            public string? person { get; set; }
+            public string? dish { get; set; }
+        }
 
         /// <summary>
         /// 厨房
@@ -73,6 +84,9 @@ namespace ConsoleAppDemo
             //....
             EventPackaged?.Invoke(person, dish);
             #endregion
+
+            SuccessArgs args = new SuccessArgs() { person = person, dish = dish };
+            EventSuccess?.Invoke(this, args);
         }
     }
 }

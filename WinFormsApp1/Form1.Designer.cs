@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             BtnStart = new Button();
-            richTextBox1 = new RichTextBox();
+            result = new RichTextBox();
             SuspendLayout();
             // 
             // BtnStart
             // 
             BtnStart.Font = new Font("Microsoft YaHei UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
-            BtnStart.Location = new Point(36, 44);
+            BtnStart.Location = new Point(593, 12);
             BtnStart.Name = "BtnStart";
             BtnStart.Size = new Size(128, 64);
             BtnStart.TabIndex = 1;
@@ -43,29 +43,31 @@
             BtnStart.UseVisualStyleBackColor = true;
             BtnStart.Click += BtnStart_Click;
             // 
-            // richTextBox1
+            // result
             // 
-            richTextBox1.Location = new Point(36, 134);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(616, 663);
-            richTextBox1.TabIndex = 2;
-            richTextBox1.Text = "";
+            result.Font = new Font("Microsoft YaHei UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            result.Location = new Point(12, 12);
+            result.Name = "result";
+            result.Size = new Size(553, 834);
+            result.TabIndex = 2;
+            result.Text = "";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(11F, 24F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1011, 858);
-            Controls.Add(richTextBox1);
+            ClientSize = new Size(849, 858);
+            Controls.Add(result);
             Controls.Add(BtnStart);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
             ResumeLayout(false);
         }
 
         #endregion
 
         private Button BtnStart;
-        private RichTextBox richTextBox1;
+        private RichTextBox result;
     }
 }

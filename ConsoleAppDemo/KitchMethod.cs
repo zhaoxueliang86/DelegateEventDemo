@@ -1,6 +1,6 @@
 ﻿namespace ConsoleAppDemo
 {
-    public  class KitchMethod
+    public class KitchMethod
     {
         public static void Restaurant_EventPackaged1(string person, string dish)
         {
@@ -20,6 +20,12 @@
         public static void Restaurant_EventWaiting(string person, string dish)
         {
             Console.WriteLine($"正在排队事件：通知{person}，{dish}已下单正在等待制作");
+        }
+
+        public static void Restaurant_EventSuccess(object? sender, EventArgs e)
+        {
+            var arg = (Restaurant.SuccessArgs)e;
+            Console.WriteLine($"订单已经完成，{arg.person}已经在等待{arg.dish}");
         }
     }
 }
