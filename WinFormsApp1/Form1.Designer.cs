@@ -30,6 +30,7 @@
         {
             BtnStart = new Button();
             result = new RichTextBox();
+            BtnStart1 = new Button();
             SuspendLayout();
             // 
             // BtnStart
@@ -52,11 +53,23 @@
             result.TabIndex = 2;
             result.Text = "";
             // 
+            // BtnStart1
+            // 
+            BtnStart1.Font = new Font("Microsoft YaHei UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            BtnStart1.Location = new Point(593, 102);
+            BtnStart1.Name = "BtnStart1";
+            BtnStart1.Size = new Size(128, 64);
+            BtnStart1.TabIndex = 3;
+            BtnStart1.Text = "开始1";
+            BtnStart1.UseVisualStyleBackColor = true;
+            BtnStart1.Click += BtnStart1_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(11F, 24F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(849, 858);
+            Controls.Add(BtnStart1);
             Controls.Add(result);
             Controls.Add(BtnStart);
             Name = "Form1";
@@ -69,5 +82,6 @@
 
         private Button BtnStart;
         private RichTextBox result;
+        private Button BtnStart1;
     }
 }

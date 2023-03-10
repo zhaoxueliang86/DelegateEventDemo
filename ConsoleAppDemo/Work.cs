@@ -30,5 +30,10 @@ namespace ConsoleAppDemo
             Console.WriteLine($"Manage2：{str}");
             return str;
         }
+
+        public static void AsyncResult(IAsyncResult result)
+        {
+            
+        }
     }
 }
